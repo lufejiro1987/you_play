@@ -1,0 +1,9 @@
+{
+  "name": "you_play",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "highcharts": "^8.2.2",
+    "jquery": "^3.5.1"
+  }
+}

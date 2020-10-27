@@ -1,0 +1,24 @@
+<h1 class="h1">Todas las ventas</h1>
+
+<%= column_chart @month_sales %>
+<%= pie_chart @quant_sales %>
+<%= line_chart @month_sales %>
+
+<table class="table">
+    <thead>
+        <th>titulo</th>
+        <th>total</th>
+        <th>comprado el dia</th>
+    </thead>
+
+    <tbody>
+        <% @sales.each do |sale| %>
+            <tr>
+                <td><%= sale.title %></td>
+                <td><%= number_to_currency(sale.total, unit: '$', precision: 0) %></td>
+                <td><%= sale.date_sale.strftime('%d/%m/%Y') %></td>
+            </tr>
+        <% end %>
+
+    </tbody>
+</table>
